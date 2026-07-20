@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($profilePath = \"$HOME\\\\Documents\\\\WindowsPowerShell\\\\Microsoft.PowerShell_profile.ps1\"; Test-Path $profilePath; if \\(Test-Path $profilePath\\) { Get-Content $profilePath })"
+    ]
+  }
+}

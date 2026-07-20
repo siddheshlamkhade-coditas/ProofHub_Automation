@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-07-14T13:39:05 IST" name="Surefire suite" finished-at="2026-07-14T13:40:05 IST" duration-ms="59802">
+    <groups>
+    </groups>
+    <test started-at="2026-07-14T13:39:05 IST" name="Surefire test" finished-at="2026-07-14T13:40:05 IST" duration-ms="59802">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@145eaa29]" started-at="2026-07-14T13:39:06 IST" name="setUp" finished-at="2026-07-14T13:39:11 IST" duration-ms="5339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLogin()[pri:0, instance:tests.LoginTest@145eaa29]" started-at="2026-07-14T13:39:11 IST" name="testLogin" finished-at="2026-07-14T13:40:05 IST" duration-ms="54173" status="FAIL">
+          <exception class="com.microsoft.playwright.TimeoutError">
+            <message>
+              <![CDATA[Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\SIDDHE~1.LAM\AppData\Local\Temp\playwright-java-7273000304023399152\package\lib\server\progress.js:78:26)
+    at Frame.click (C:\Users\SIDDHE~1.LAM\AppData\Local\Temp\playwright-java-7273000304023399152\package\lib\server\frames.js:996:23)
+    at FrameDispatcher.click (C:\Users\SIDDHE~1.LAM\AppData\Local\Temp\playwright-java-7273000304023399152\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\SIDDHE~1.LAM\AppData\Local\Temp\playwright-java-7273000304023399152\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\SIDDHE~1.LAM\AppData\Local\Temp\playwright-java-7273000304023399152\package\lib\server\dispatchers\dispatcher.js:365:39)
+}
+Call log:
+- waiting for locator("#ext-element-82 > div > span.icon.far.fa-folder.h-projects")
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\SIDDHE~1.LAM\AppData\Local\Temp\playwright-java-7273000304023399152\package\lib\server\progress.js:78:26)
+    at Frame.click (C:\Users\SIDDHE~1.LAM\AppData\Local\Temp\playwright-java-7273000304023399152\package\lib\server\frames.js:996:23)
+    at FrameDispatcher.click (C:\Users\SIDDHE~1.LAM\AppData\Local\Temp\playwright-java-7273000304023399152\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\SIDDHE~1.LAM\AppData\Local\Temp\playwright-java-7273000304023399152\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\SIDDHE~1.LAM\AppData\Local\Temp\playwright-java-7273000304023399152\package\lib\server\dispatchers\dispatcher.js:365:39)
+}
+Call log:
+- waiting for locator("#ext-element-82 > div > span.icon.far.fa-folder.h-projects")
+
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:156)
+at com.microsoft.playwright.Locator.click(Locator.java:2387)
+at pages.LoginPage.clickProject(LoginPage.java:59)
+at tests.LoginTest.testLogin(LoginTest.java:25)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\SIDDHE~1.LAM\AppData\Local\Temp\playwright-java-7273000304023399152\package\lib\server\progress.js:78:26)
+    at Frame.click (C:\Users\SIDDHE~1.LAM\AppData\Local\Temp\playwright-java-7273000304023399152\package\lib\server\frames.js:996:23)
+    at FrameDispatcher.click (C:\Users\SIDDHE~1.LAM\AppData\Local\Temp\playwright-java-7273000304023399152\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\SIDDHE~1.LAM\AppData\Local\Temp\playwright-java-7273000304023399152\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\SIDDHE~1.LAM\AppData\Local\Temp\playwright-java-7273000304023399152\package\lib\server\dispatchers\dispatcher.js:365:39)
+}
+Call log:
+- waiting for locator("#ext-element-82 > div > span.icon.far.fa-folder.h-projects")
+
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+... 44 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.TimeoutError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@145eaa29]" started-at="2026-07-14T13:40:05 IST" name="tearDown" finished-at="2026-07-14T13:40:05 IST" duration-ms="219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
