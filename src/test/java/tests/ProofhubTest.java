@@ -21,7 +21,7 @@ public class ProofhubTest extends BaseTest {
         page.waitForTimeout(8000); // temporary — see note below
 
         // Enter password and log in
-        proofhubPage.enterPassword("");
+        proofhubPage.enterPassword("Z");
         proofhubPage.clickSignInButton();
 
         // Navigate to project

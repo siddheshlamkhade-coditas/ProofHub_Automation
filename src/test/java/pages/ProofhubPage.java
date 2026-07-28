@@ -11,12 +11,8 @@ public class ProofhubPage {
     private Locator nextButton;
     private Locator passwordField;
     private Locator signInButton;
-    private Locator projects;
-    private Locator projectField;
-    private Locator addTaskBtn;
-    private Locator inputfield;
-    private Locator desc;
-    private Locator getAddTaskBtn;
+    private Locator project;
+
 
     public ProofhubPage(Page page) {
         this.page = page;
@@ -25,25 +21,15 @@ public class ProofhubPage {
 
 
     private void initializeLocators() {
-        this.emailField = page.locator("//input[@name='userNameEmail']");
+        this.emailField = page.locator("//*[@id='textfield-1018-inputWrap']/input");
 
-        this.nextButton = page.locator("//span[text()='NEXT']");
+        this.nextButton = page.locator("//*[@id='button-1038']/span");
 
-        this.passwordField = page.locator("//input[@name='userPassword']");
+        this.passwordField = page.locator("//*[@id='textfield-1046-inputEl']");
 
-        this.signInButton = page.locator("//a[@role='button' and .//span[text()='LOG IN']]");
+        this.signInButton = page.locator("#button-1028-btnEl");
 
-        this.projects = page.locator("//span[contains(@class,'h-projects')][1]");
-
-        this.projectField = page.locator("//span[@data-qtip='Collabricks']");
-
-        this.addTaskBtn =page.locator("//span[text()='Add']");
-
-        this.inputfield = page.locator("//input[@name='title']");
-
-        this.desc = page.locator("//body[@data-id='taskDesc']");
-
-        this.getAddTaskBtn =page.locator("//a[contains(@class,'h-taskSubmit')]");
+        this.project = page.locator("#ext-element-82 > div > span.icon.far.fa-folder.h-projects");
     }
 
     public void navigateToLoginPage(String url) {
@@ -70,31 +56,34 @@ public class ProofhubPage {
     }
 
     public void clickProject() {
-        projects.click();
+        project.click();
     }
 
-    public void clickProjectField() {
-        projectField.click();
+
+    public void login(String email, String password) {
+        enterEmail(email);
+        clickNextButton();
+        page.waitForTimeout(1000); // Wait for password field to appear
+        enterPassword(password);
+        clickSignInButton();
     }
 
-    public void clickAddTaskBtn() {
-        addTaskBtn.click();
-    }
-    public void clickInputfield() {
-        inputfield.click();
+    public boolean isEmailFieldVisible() {
+        return emailField.isVisible();
     }
 
-    public void enterTicketTitle(String title){
-        inputfield.fill(title);
+
+    public boolean isPasswordFieldVisible() {
+        return passwordField.isVisible();
     }
 
-    public void enterDescription(String description){
-        desc.fill(description);
+
+    public boolean isSignInButtonVisible() {
+        return signInButton.isVisible();
     }
 
-    public void clickgetAddTaskBtn() {
-        getAddTaskBtn.click();
+    public Page getPage() {
+        return page;
     }
-
 }
 
