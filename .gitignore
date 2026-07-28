@@ -4,8 +4,8 @@ target/
 # TestNG default output
 test-output/
 
-# Extent report output
-reports/
+# Extent report output (root-level runtime folder only — not src/**/reports source packages)
+/reports/
 
 # Runtime artifacts
 logs/
