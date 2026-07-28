@@ -87,6 +87,10 @@ public class ProofhubPage extends BasePage {
 
     public void submitTicket() {
         submitTicketBtn.click();
+        // Without this, the last ticket in a batch gets cut off before ProofHub's server
+        // actually saves it — every earlier ticket only "worked" because the next
+        // loop iteration's actions happened to wait long enough to mask the same gap.
+        page.waitForTimeout(1500);
     }
 
     public boolean isEmailFieldVisible() {
