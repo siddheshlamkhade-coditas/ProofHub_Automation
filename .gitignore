@@ -1,0 +1,24 @@
+# Maven
+target/
+
+# TestNG default output
+test-output/
+
+# Extent report output
+reports/
+
+# Runtime artifacts
+logs/
+screenshots/
+videos/
+traces/
+
+# Environment files with real credentials — never commit
+.env.local
+.env.dev
+.env.qa
+.env.staging
+
+# IDE
+.idea/
+*.iml

@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(javap -p target/test-classes/pages/ProofhubPage.class)",
+      "Bash(git rm *)",
+      "Bash(mvn -q -o clean compile test-compile)",
+      "Bash(mvn -q clean compile test-compile)",
+      "Bash(mvn -q -o compile)",
+      "Bash(git check-ignore *)",
+      "Bash(mvn -q -o test-compile)",
+      "Bash(find ~/.m2 -iname \"dotenv-java*.jar\" 2>/dev/null)",
+      "Read(//c/Users/siddhesh.lamkhade_co/.m2/**)",
+      "Read(//tmp/**)",
+      "Bash(xargs grep -l \"getenv\\\\|systemProperties\")",
+      "Read(//tmp/dotenv-src/io/github/cdimascio/dotenv/**)",
+      "Bash(grep -n \"getenv\\\\|systemProperties\\\\|fun get\\(\" -A3 -B3 /tmp/dotenv-src/io/github/cdimascio/dotenv/DotenvBuilder.java)",
+      "Bash(rm -rf /tmp/dotenv-src)"
+    ],
+    "additionalDirectories": [
+      "\\tmp"
+    ]
+  }
+}
